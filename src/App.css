@@ -268,3 +268,103 @@ body {
     height: 120px;
   }
 }
+
+.loading-screen {
+  position: fixed; /* Cover the entire screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color); /* Use the same background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Make sure it's on top of everything */
+  opacity: 1;
+  transition: opacity 1s ease-out; /* This is for the fade-out effect */
+}
+
+.loading-screen.hidden {
+  opacity: 0;
+  pointer-events: none; /* Make it unclickable when hidden */
+}
+
+.loading-content {
+  text-align: center;
+}
+
+/* Animation for the text to fade in and move up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-text {
+  display: block;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  opacity: 0; /* Start hidden */
+  animation: fadeInUp 0.8s ease-out forwards; /* Apply the animation */
+}
+
+.fade-in-text.name {
+  font-family: 'Pacifico', cursive;
+  font-size: 4rem;
+  color: var(--heading-color);
+  animation-delay: 0.5s; /* Make the name appear after "Hello," */
+}
+
+/* Animation for the heart to pop in and beat */
+@keyframes popAndBeat {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.heart-animation {
+  width: 50px;
+  height: 50px;
+  background-color: var(--secondary-color);
+  position: relative;
+  margin: 30px auto 0;
+  transform: rotate(-45deg) scale(0); /* Start scaled down */
+  opacity: 0;
+  animation: popAndBeat 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation-delay: 1.5s; /* Make the heart appear after the name */
+}
+
+.heart-animation::before,
+.heart-animation::after {
+  content: '';
+  width: 50px;
+  height: 50px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart-animation::before {
+  top: -25px;
+  left: 0;
+}
+
+.heart-animation::after {
+  top: 0;
+  left: 25px;
+}
