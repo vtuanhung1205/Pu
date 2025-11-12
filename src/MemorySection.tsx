@@ -7,15 +7,15 @@ import photo3 from '../public/photo3.jpg';
 const memories = [
   {
     image: photo1,
-    caption: "The day we first met. I was so nervous!",
+    caption: "Gái xinh cam 0.5x",
   },
   {
     image: photo2,
-    caption: "Our first big adventure together.",
+    caption: "Biển đồ nè",
   },
   {
     image: photo3,
-    caption: "This was the moment I knew I wanted to spend my life with you.",
+    caption: "Nhìn cưng ha =)).",
   },
 ];
 
@@ -33,7 +33,7 @@ export default function MemorySection() {
 
   return (
     <div className="content-section">
-      <h3>Our Favorite Memories</h3>
+      <h3>Your Most Beautiful Pics</h3>
       <div className="slideshow-container">
         {memories.map((memory, index) => (
           <img

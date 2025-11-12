@@ -5,8 +5,8 @@ import Confetti from 'react-confetti';
 import celebrationPhoto from '../public/our-photo.jpeg';
 
 const noButtonMessages = [
-  "No", "Are you sure?", "Really sure?", "Please?",
-  "Don't do this to me :(", "I'm gonna cry...", "You're breaking my heart ;(",
+  "No", "Thiệt á hở?", "chắc không rứa?", "RIU?",
+  "BÀ DỠN MÀ HẢ", "THIỆT LUÔNNN!!!?", "BUỒN:(",
 ];
 
 export default function ProposalHeader({ name }: { name: string }) {
@@ -29,16 +29,16 @@ export default function ProposalHeader({ name }: { name: string }) {
           <Confetti width={window.innerWidth} height={window.innerHeight} />
           {/* 2. This is the new, more personal "Yes" screen */}
           <div className="celebration-message">
-            <h1>YAY, SHE SAID YES!</h1>
+            <h1>YAY, CẢM ƠN GÁI ĐẸP!</h1>
             <img src={celebrationPhoto} alt="Celebration" className="celebration-photo" />
-            <h2>I can't wait to spend forever with you.</h2>
-            <p>I love you more than words can say!</p>
+            <h2>Hans sẽ tặng em một BÁT BẢO NGÔ GIA bất kì khi nào nhé!!</h2>
+            <p>YÊU BÉ UYÊN NHIỀUUUUUUUUUUUUU!!!!</p>
           </div>
         </>
       ) : (
         <>
           <h1>{name}</h1>
-          <h2>Will you be my girl?</h2>
+          <h2>Đồng ý làm người yêu em nhe!!</h2>
           <div className="button-container">
             <button
               className="yes-button"

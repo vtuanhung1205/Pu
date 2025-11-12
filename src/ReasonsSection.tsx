@@ -5,11 +5,11 @@ export default function ReasonsSection() {
     <div className="content-section">
       <h3>Why I Want You To Be Mine</h3>
       <ul>
-        <li>Your smile lights up my world.</li>
-        <li>You make me laugh like no one else.</li>
-        <li>You are the kindest person I've ever met.</li>
-        <li>Every moment with you is an adventure.</li>
-        <li>You make me a better person.</li>
+        <li>Bé cười xinh thì khỏi bàn</li>
+        <li>SIÊU CẤP ĐẸP GÁI!!!!!</li>
+        <li>Siu Giỏiiii, cực kì giỏi trong các việc thường ngày</li>
+        <li>Muốn đồng hành cùng Pu và muốn Pu là người đồng hành</li>
+        <li>Khám phá tay nghề nấu ăn của Pu</li>
       </ul>
     </div>
   );

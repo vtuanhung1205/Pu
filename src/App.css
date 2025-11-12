@@ -220,3 +220,51 @@ body {
   font-size: 1.5rem;
   color: var(--heading-color);
 }
+
+@media (max-width: 768px) {
+
+  /* 1. Stack the two content sections vertically */
+  .content-wrapper {
+    flex-direction: column; /* Change from side-by-side to top-to-bottom */
+    gap: 40px; /* Adjust the space between the stacked items */
+    margin-top: 30px;
+  }
+
+  /* 2. Adjust font sizes to be more readable on small screens */
+  .proposal-header h1 {
+    font-size: 3.5rem; /* Was 5rem */
+  }
+
+  .proposal-header h2 {
+    font-size: 1.3rem; /* Was 1.8rem */
+  }
+
+  .content-section h3 {
+    font-size: 2.2rem; /* Was 2.5rem */
+  }
+
+  .content-section li {
+    font-size: 1rem; /* Was 1.1rem */
+  }
+
+  /* 3. Make spacing more compact to save vertical space */
+  .proposal-header {
+    padding: 30px 15px;
+    margin-bottom: 20px;
+  }
+
+  .yes-button, .no-button {
+    padding: 12px 28px; /* Make buttons slightly smaller but still tappable */
+  }
+
+  /* 4. Adjust the slideshow height for a better fit on mobile */
+  .slideshow-container {
+    height: 250px; /* Was 300px */
+  }
+
+  /* 5. Adjust the circular celebration photo size */
+  .celebration-photo {
+    width: 120px;
+    height: 120px;
+  }
+}
