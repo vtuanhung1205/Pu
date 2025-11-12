@@ -10,7 +10,7 @@ function App() {
     <div className="App">
        <AnimatedBackground />
       {/* Pass her name as a prop! */}
-      <ProposalHeader name="Maria" /> 
+      <ProposalHeader name="Pu" /> 
       
       <div className="content-wrapper">
         <MemorySection />

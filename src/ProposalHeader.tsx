@@ -1,26 +1,17 @@
+// Make sure to import React, useState, and Confetti as before
 import React, { useState } from 'react';
 import Confetti from 'react-confetti';
+// 1. Import your special celebration photo
+import celebrationPhoto from '../public/our-photo.jpeg';
 
-// An array of cute messages for the "No" button
 const noButtonMessages = [
-  "No",
-  "Are you sure?",
-  "Really sure?",
-  "Please?",
-  "Don't do this to me :(",
-  "I'm gonna cry...",
-  "You're breaking my heart ;(",
+  "No", "Are you sure?", "Really sure?", "Please?",
+  "Don't do this to me :(", "I'm gonna cry...", "You're breaking my heart ;(",
 ];
 
-interface ProposalHeaderProps {
-  name: string;
-}
-
-export default function ProposalHeader({ name }: ProposalHeaderProps) {
+export default function ProposalHeader({ name }: { name: string }) {
   const [isAccepted, setIsAccepted] = useState(false);
   const [noCount, setNoCount] = useState(0);
-
-  // As "No" is clicked, the "Yes" button gets bigger
   const yesButtonSize = noCount * 20 + 16;
 
   function handleNoClick() {
@@ -28,7 +19,6 @@ export default function ProposalHeader({ name }: ProposalHeaderProps) {
   }
 
   function getNoButtonText() {
-    // Cycle through the messages, or stick to the last one
     return noButtonMessages[Math.min(noCount, noButtonMessages.length - 1)];
   }
 
@@ -37,9 +27,12 @@ export default function ProposalHeader({ name }: ProposalHeaderProps) {
       {isAccepted ? (
         <>
           <Confetti width={window.innerWidth} height={window.innerHeight} />
+          {/* 2. This is the new, more personal "Yes" screen */}
           <div className="celebration-message">
-            <h1>YAY, SHE SAID YES! 🎉</h1>
-            <p>I love you so much!</p>
+            <h1>YAY, SHE SAID YES!</h1>
+            <img src={celebrationPhoto} alt="Celebration" className="celebration-photo" />
+            <h2>I can't wait to spend forever with you.</h2>
+            <p>I love you more than words can say!</p>
           </div>
         </>
       ) : (
