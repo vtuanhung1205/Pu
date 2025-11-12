@@ -1,0 +1,148 @@
+/* 1. Import the cute fonts: Pacifico and Quicksand */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap');
+
+/* 2. Define our cute color palette */
+:root {
+  --bg-color: #fff0f5; /* Lavender Blush */
+  --primary-color: #ffb6c1; /* Light Pink */
+  --secondary-color: #f08080; /* Light Coral */
+  --text-color: #5c5454; /* A softer, darker gray for text */
+  --heading-color: #d96a7c; /* A darker pink for headings */
+  --white: #ffffff;
+  --yes-button-bg: #4caf50; /* Green */
+  --no-button-bg: #f44336; /* Red */
+}
+
+/* 3. Rules for full-page background animation */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 4. Main body styling for perfect centering */
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  
+  /* Flexbox properties for centering */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.App {
+  padding: 20px;
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+/* --- Proposal Header (No background) --- */
+.proposal-header {
+  padding: 40px 20px;
+  margin-bottom: 40px;
+}
+
+.proposal-header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 5rem;
+  color: var(--secondary-color);
+  margin: 0;
+}
+
+.proposal-header h2 {
+  font-size: 1.8rem;
+  margin: 10px 0 30px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.yes-button, .no-button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.yes-button {
+  background-color: var(--yes-button-bg);
+}
+
+.no-button {
+  background-color: var(--no-button-bg);
+}
+
+.yes-button:hover {
+  transform: scale(1.1);
+}
+
+.celebration-message {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+/* --- Content Sections (No background) --- */
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.content-section {
+  width: 100%;
+  max-width: 400px;
+  flex-grow: 1;
+}
+
+.content-section h3 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  color: var(--heading-color);
+  margin-top: 0;
+}
+
+.memory-photo {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.content-section ul {
+  list-style-type: '💕';
+  padding-left: 25px;
+  text-align: left;
+}
+
+.content-section li {
+  padding-left: 10px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
